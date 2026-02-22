@@ -23,26 +23,27 @@
     </style>
 </head>
 
-<body class="max-w-[1110px] mx-auto my-14">
-    <header class="pb-8 border-b-2 border-gray-300">
-        <h2 class="font-bold text-3xl mb-5 text-[#002C5C]"> Job Application Tracker</h2>
-        <div class="dashboarh-header grid grid-cols-3 gap-8">
-            <div class="total">
-                <p>Total</p>
-                <h3 class="text-2xl font-bold text-[#002C5C]">8</h3>
-            </div>
-            <div class="interview">
-                <p>Inverview</p>
-                <h3 class="text-2xl font-bold text-[#10B981]">0</h3>
-            </div>
-            <div class="rejected">
-                <p>Rejected</p>
-                <h3 class="text-2xl font-bold text-[#EF4444]">0</h3>
-            </div>
-        </div>
-    </header>
+<body class=" bg-[#F8FAFC]">
 
-    <main>
+    <main class="max-w-[1110px] mx-auto my-14">
+        <header class="pb-8 border-b-2 border-gray-300">
+            <h2 class="font-bold text-3xl mb-5 text-[#002C5C]"> Job Application Tracker</h2>
+            <div class="dashboarh-header grid grid-cols-3 gap-8">
+                <div class="total">
+                    <p>Total</p>
+                    <h3 class="text-2xl font-bold text-[#002C5C]">8</h3>
+                </div>
+                <div class="interview">
+                    <p>Inverview</p>
+                    <h3 class="text-2xl font-bold text-[#10B981]">0</h3>
+                </div>
+                <div class="rejected">
+                    <p>Rejected</p>
+                    <h3 class="text-2xl font-bold text-[#EF4444]">0</h3>
+                </div>
+            </div>
+        </header>
+
         <section class="title mt-8 mb-6 flex justify-between">
             <h3 class="font-bold text-[#002C5C] text-2xl">Available Jobs</h3>
             <p class="text-gray-400">8 Jobs</p>
@@ -238,6 +239,16 @@
             </div>
         </section>
 
+        <!-- No Job available -->
+
+        <section class="text-center p-[100px]">
+            <!-- <i class="fa-regular fa-file-lines"></i>  -->
+            <div class="w-[100px] mx-auto">
+                <img src="./file.png" alt="" class="mx-auto">
+            </div>
+            <h3 class="text-[#002C5C] font-semibold text-xl"> No jobs available</h3>
+            <p class="text-gray-400">Check back soon for new job opportunities</p>
+        </section>
 
     </main>
 </body>
