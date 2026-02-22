@@ -1,68 +1,29 @@
-const titleInterviewBtn = document.getElementById("interview-main-btn");
-titleInterviewBtn.addEventListener("click", function () {
-  alert("click");
+// show all jobs section
+const totalMainBtn = document.getElementById("total-main-btn");
+totalMainBtn.addEventListener("click", function () {
+  const jobsAvailable = document.getElementById("jobs-available");
+  // console.log(jobsAvailable);
+  jobsAvailable.classList.add("hidden");
+  const allJobs = document.getElementById("all-jobs");
+  allJobs.classList.remove("hidden");
 });
 
-// let count = 0;
-// let total = 8;
-// const select = document.querySelectorAll('.interview-btn')
-// select.forEach((element)=> {
-//     // console.log(element);
-//     element.addEventListener("click", function(){
-//         if (total < 0)
-//             {
-//                 return alert("Invaild Interview");
+// show interview section
 
-//             };
-//         document.getElementById('total').innerText = total;
-//         document.getElementById('interview-number').innerText = count;
-//         count ++;
-//         total = total - 1;
-//     });
-// });
-
-// const jobs = 8;
-
-// function updown(click, job = 0, callBack = () => {}) {
-//   let count = 0;
-//   let total = job;
-
-//   const select = document.querySelectorAll(click);
-
-//   select.forEach((element) => {
-//     element.addEventListener("click", function () {
-//       if (total <= 0) return alert("Invaild Interview");
-
-//       count++;
-//       total = total - 1;
-//       callBack({ interview: count, total });
-//     });
-//   });
-// }
-
-// const rejectedFun = ({ interview = 0, total = 0 }) => {
-//   const interviews = document.getElementById("interview");
-//   document.getElementById("total").innerText = total;
-
-//   const jo = document.getElementById("job");
-
-//   interviews.addEventListener("click", () => {
-//     const isActive = interviews.classList.toggle("active");
-
-//     if (isActive) {
-//       jo.classList.add("block");
-//       jo.classList.remove("hidden");
-//     } else {
-//       jo.classList.add("hidden");
-//       jo.classList.remove("block");
-//     }
-//   });
-// };
-
-// rejectedFun({ total: jobs, interview: 0 });
-
-// updown(".interview-btn", jobs, ({ interview, total }) => {
-//   rejectedFun({ interview, total });
-//   document.getElementById("total").innerText = total;
-//   document.getElementById("interview-number").innerText = interview;
-// });
+const titleInterviewBtn = document.getElementById("interview-main-btn");
+titleInterviewBtn.addEventListener("click", function () {
+  const jobsAvailable = document.getElementById("jobs-available");
+  // console.log(jobsAvailable);
+  jobsAvailable.classList.remove("hidden");
+  const allJobs = document.getElementById("all-jobs");
+  allJobs.classList.add("hidden");
+});
+// show Rejected section
+const titleRejectedBtn = document.getElementById("rejected-main-btn");
+titleRejectedBtn.addEventListener("click", function () {
+  const jobsAvailable = document.getElementById("jobs-available");
+  // console.log(jobsAvailable);
+  jobsAvailable.classList.remove("hidden");
+  const allJobs = document.getElementById("all-jobs");
+  allJobs.classList.add("hidden");
+});
