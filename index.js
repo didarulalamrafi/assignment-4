@@ -1,6 +1,5 @@
 const titleInterviewBtn = document.getElementById("interview-main-btn");
 titleInterviewBtn.addEventListener("click", function () {
-  //   console.log("interveiw click");
   alert("click");
 });
 
