@@ -26,18 +26,18 @@
 <body class=" bg-[#F8FAFC] py-14">
 
     <main class="max-w-[1110px] mx-auto ">
-        <header class=" mx-auto pb-8 border-b-2 border-gray-300 ">
+        <header class=" mx-auto pb-8 border-b-2 border-gray-300 px-5">
             <h2 class="font-bold text-3xl mb-5 text-[#002C5C]"> Job Application Tracker</h2>
             <div class="dashboarh-header grid grid-cols-3 gap-x-7">
-                <div id="total-main-btn" class="total rounded-lg p-5 bg-white">
+                <div class="total rounded-lg p-5 bg-white">
                     <p>Total</p>
                     <h3 id="total" class="text-2xl font-bold text-[#002C5C]">8</h3>
                 </div>
-                <div id="interview-main-btn" class="interview rounded-lg p-5 bg-white">
+                <div class="interview rounded-lg p-5 bg-white">
                     <p>Inverview</p>
                     <h3 id="interview-number" class="text-2xl font-bold text-[#10B981]">0</h3>
                 </div>
-                <div id="rejected-main-btn" class="rejected rounded-lg p-5 bg-white">
+                <div class="rejected rounded-lg p-5 bg-white">
                     <p>Rejected</p>
                     <h3 class="text-2xl font-bold text-[#EF4444]">0</h3>
                 </div>
@@ -45,15 +45,14 @@
         </header>
 
 
-
         <div class="title w-11/12 mx-auto mt-8 mb-6 flex justify-between">
             <h3 class="font-bold text-[#002C5C] text-2xl">Available Jobs</h3>
             <p class="text-gray-400">8 Jobs</p>
         </div>
         <div class="btn">
-            <button class="btn px-8 py-2 btn-active btn-primary">All</button>
-            <button class="btn btn-soft ">Inverview</button>
-            <button class="btn btn-soft ">Rejected</button>
+            <button id="total-main-btn" class="btn px-8 py-2 btn-active btn-primary">All</button>
+            <button id="interview-main-btn" class="btn btn-soft ">Inverview</button>
+            <button id="rejected-main-btn" class="btn btn-soft ">Rejected</button>
         </div>
 
         <!-- job section -->
@@ -70,7 +69,7 @@
                 </div>
                 <p class="text-gray-400">Remote • Full-time • $130,000 - $175,000</p>
                 <div>
-                    <button class="btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
+                    <button class="no-apply hidden btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
                 </div>
                 <p class="text-gray-400">Build cross-platform mobile applications using React Native. Work on products
                     used
@@ -95,7 +94,7 @@
                 <p class="text-gray-400">Los Angeles, CA •
                     Part-time • $80,000 - $120,000</p>
                 <div>
-                    <button class="btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
+                    <button class="no-apply hidden btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
                 </div>
                 <p class="text-gray-400">Create stunning web experiences for high-profile clients. Must have portfolio
                     and
@@ -121,7 +120,7 @@
                     •
                     $125,000 - $165,000</p>
                 <div>
-                    <button class="btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
+                    <button class="no-apply hidden btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
                 </div>
                 <p class="text-gray-400">Transform complex data into compelling visualizations. Required skills: D3.js,
                     React, and strong analytical thinking.
@@ -147,7 +146,7 @@
                     •
                     $140,000 - $190,000</p>
                 <div>
-                    <button class="btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
+                    <button class="no-apply hidden btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
                 </div>
                 <p class="text-gray-400">Design and maintain scalable backend systems using Python and AWS. Work with
                     modern
@@ -173,7 +172,7 @@
                     •
                     $110,000 - $150,000</p>
                 <div>
-                    <button class="btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
+                    <button class="no-apply hidden btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
                 </div>
                 <p class="text-gray-400">Create beautiful and functional user interfaces for our suite of products.
                     Strong
@@ -199,7 +198,7 @@
                     •
                     $130,000 - $175,000</p>
                 <div>
-                    <button class="btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
+                    <button class="no-apply hidden btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
                 </div>
                 <p class="text-gray-400">We are looking for an experienced Frontend Developer to build scalable web
                     applications using React and TypeScript. You will work with a talented team on cutting-edge
@@ -226,7 +225,7 @@
                     •
                     $120,000 - $160,000</p>
                 <div>
-                    <button class="btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
+                    <button class="no-apply hidden btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
                 </div>
                 <p class="text-gray-400">Join our fast-growing startup and work on our core platform. Experience with
                     Node.js and React required. Great benefits and equity package included.</p>
@@ -247,7 +246,7 @@
                 </div>
                 <p class="text-gray-400">Remote • Full-time • $130,000 - $175,000</p>
                 <div>
-                    <button class="btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
+                    <button class="no-apply hidden btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
                 </div>
                 <p class="text-gray-400">Build cross-platform mobile applications using React Native. Work on products
                     used

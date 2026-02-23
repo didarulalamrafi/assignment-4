@@ -27,3 +27,26 @@ titleRejectedBtn.addEventListener("click", function () {
   const allJobs = document.getElementById("all-jobs");
   allJobs.classList.add("hidden");
 });
+
+// Base added
+
+const interviewBtn = document.querySelectorAll(".interview-btn");
+for (let i = 0; i < interviewBtn.length; i++) {
+  const interviewButton = interviewBtn[i];
+  interviewButton.addEventListener("click", function () {
+    const base = interviewButton;
+    base.classList.remove("hidden");
+    console.log("clcik");
+  });
+}
+
+// deleted
+const deletedBtn = document.querySelectorAll(".deleted");
+
+for (let i = 0; i < deletedBtn.length; i++) {
+  deletedBtn[i].addEventListener("click", function () {
+    const parent = this.parentElement.parentElement;
+    parent.remove();
+  });
+  // console.log(parent);
+}
