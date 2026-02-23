@@ -1,3 +1,22 @@
+let interviewList = [ ];
+let rejectedList = [ ];
+
+let totalNumber = document.getElementById('total');
+let interviewNumber = document.getElementById('interview-number');
+let rejectedNumber = document.getElementById('rejected-number');
+
+const allJobsSection = document.getElementById('all-jobs');
+function calculateCount(){
+  totalNumber.innerText = allJobsSection.children.length;
+  interviewNumber.innerText = interviewList.length;
+  rejectedNumber.innerText = rejectedList.length;
+}
+calculateCount();
+// console.log()
+
+// console.log(totalNumber, interviewNumber, rejectedNumber);
+// console.log(rejectedNumber);
+
 // show all jobs section
 const totalMainBtn = document.getElementById("total-main-btn");
 totalMainBtn.addEventListener("click", function () {
