@@ -1,71 +1,52 @@
-let interviewList = [ ];
-let rejectedList = [ ];
+let interviewList = [];
+let rejectedList = [];
 
-let totalNumber = document.getElementById('total');
-let interviewNumber = document.getElementById('interview-number');
-let rejectedNumber = document.getElementById('rejected-number');
+let totalNumber = document.getElementById("total");
+let interviewNumber = document.getElementById("interview-number");
+let rejectedNumber = document.getElementById("rejected-number");
 
-const allJobsSection = document.getElementById('all-jobs');
-function calculateCount(){
+const allJobsSection = document.getElementById("all-jobs");
+function calculateCount() {
   totalNumber.innerText = allJobsSection.children.length;
   interviewNumber.innerText = interviewList.length;
   rejectedNumber.innerText = rejectedList.length;
 }
 calculateCount();
-// console.log()
+// ***************************
+// count section end
+// ***************************
 
-// console.log(totalNumber, interviewNumber, rejectedNumber);
-// console.log(rejectedNumber);
+// **********************************
+// Toggole section start
+// **********************************
+const allMainBtn = document.getElementById("all-main-btn");
+const interviewBtnMain = document.getElementById("interview-main-btn");
+const rejectedMainBtn = document.getElementById("rejected-main-btn");
+function toggleStyle(id) {
+  console.log("click");
+  allMainBtn.classList.add("btn-soft");
+  interviewBtnMain.classList.add("btn-soft");
+  rejectedMainBtn.classList.add("btn-soft");
 
-// show all jobs section
-const totalMainBtn = document.getElementById("total-main-btn");
-totalMainBtn.addEventListener("click", function () {
-  const jobsAvailable = document.getElementById("jobs-available");
-  // console.log(jobsAvailable);
-  jobsAvailable.classList.add("hidden");
-  const allJobs = document.getElementById("all-jobs");
-  allJobs.classList.remove("hidden");
-});
-
-// show interview section
-
-const titleInterviewBtn = document.getElementById("interview-main-btn");
-titleInterviewBtn.addEventListener("click", function () {
-  const jobsAvailable = document.getElementById("jobs-available");
-  // console.log(jobsAvailable);
-  jobsAvailable.classList.remove("hidden");
-  const allJobs = document.getElementById("all-jobs");
-  allJobs.classList.add("hidden");
-});
-// show Rejected section
-const titleRejectedBtn = document.getElementById("rejected-main-btn");
-titleRejectedBtn.addEventListener("click", function () {
-  const jobsAvailable = document.getElementById("jobs-available");
-  // console.log(jobsAvailable);
-  jobsAvailable.classList.remove("hidden");
-  const allJobs = document.getElementById("all-jobs");
-  allJobs.classList.add("hidden");
-});
-
-// Base added
-
-const interviewBtn = document.querySelectorAll(".interview-btn");
-for (let i = 0; i < interviewBtn.length; i++) {
-  const interviewButton = interviewBtn[i];
-  interviewButton.addEventListener("click", function () {
-    const base = interviewButton;
-    base.classList.remove("hidden");
-    console.log("clcik");
-  });
+  allMainBtn.classList.remove("btn-primary");
+  interviewBtnMain.classList.remove("btn-primary");
+  rejectedMainBtn.classList.remove("btn-primary");
+  const selected = document.getElementById(id);
+  selected.classList.add("btn-primary", "btn-active");
 }
 
-// deleted
-const deletedBtn = document.querySelectorAll(".deleted");
+// ******************************
+// toggle Part close
+// ******************************
 
-for (let i = 0; i < deletedBtn.length; i++) {
-  deletedBtn[i].addEventListener("click", function () {
-    const parent = this.parentElement.parentElement;
-    parent.remove();
-  });
-  // console.log(parent);
-}
+// main body part start
+
+const allJobSection = document.getElementById("all-jobs");
+console.log(allJobsSection);
+allJobSection.addEventListener("click", function (event) {
+  const parentNode = event.target.parentNode.parentNode;
+  const interviewBtn = event.target.classList.contains("interview-btn");
+  if (interviewBtn) {
+    console.log("Interview dibi?");
+  }
+});
