@@ -39,7 +39,7 @@
                 </div>
                 <div class="rejected rounded-lg p-5 bg-white">
                     <p>Rejected</p>
-                    <h3 class="text-2xl font-bold text-[#EF4444]">0</h3>
+                    <h3 id="rejected-number" class="text-2xl font-bold text-[#EF4444]">0</h3>
                 </div>
             </div>
         </header>
@@ -50,9 +50,12 @@
             <p class="text-gray-400">8 Jobs</p>
         </div>
         <div class="btn">
-            <button id="total-main-btn" class="btn px-8 py-2 btn-active btn-primary">All</button>
-            <button id="interview-main-btn" class="btn btn-soft ">Inverview</button>
-            <button id="rejected-main-btn" class="btn btn-soft ">Rejected</button>
+            <button onclick="toggleStyle('all-main-btn')" id="all-main-btn"
+                class="btn px-8 py-2 btn-active btn-primary">All</button>
+            <button onclick="toggleStyle('interview-main-btn')" id="interview-main-btn"
+                class="btn btn-soft ">Inverview</button>
+            <button onclick="toggleStyle('rejected-main-btn')" id="rejected-main-btn"
+                class="btn btn-soft ">Rejected</button>
         </div>
 
         <!-- job section -->
@@ -69,7 +72,8 @@
                 </div>
                 <p class="text-gray-400">Remote • Full-time • $130,000 - $175,000</p>
                 <div>
-                    <button class="no-apply hidden btn btn-soft text-[#002C5C] font-medium"> NOT APPLY </button>
+                    <button id="status-btn" class="no-apply hidden btn btn-soft text-[#002C5C] font-medium"> NOT APPLY
+                    </button>
                 </div>
                 <p class="text-gray-400">Build cross-platform mobile applications using React Native. Work on products
                     used
